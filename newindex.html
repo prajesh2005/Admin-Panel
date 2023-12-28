@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    
+    <!-- Form to add product -->
+    <form id="products">
+        <label for="type">Type:</label>
+        <input type="text" id="type" required>
+        
+        <label for="desc">Description:</label>
+        <input type="text" id="desc" required>
+        
+        <label for="price">Price:</label>
+        <input type="number" id="price" required>
+        
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" required>
+        
+        <button type="button" id="add_product" onclick="addProduct()">Add Product</button>
+    </form>
+    
+    <!-- Button to show products -->
+    <button id="show_products" onclick="window.location.href='newinventory.html'">Show Products</button>
+
+    <script>
+        // Function to add product to local storage
+        function addProduct() {
+            // Get input values
+            var type = document.getElementById('type').value;
+            var desc = document.getElementById('desc').value;
+            var price = document.getElementById('price').value;
+            var image = document.getElementById('image').value;
+
+            // Create product object
+            var product = {
+                type: type,
+                desc: desc,
+                price: price,
+                image: image
+            };
+
+            // Get existing products from local storage or initialize an empty array
+            var products = JSON.parse(localStorage.getItem('products')) || [];
+
+            // Add new product to the array
+            products.push(product);
+
+            // Save updated array back to local storage
+            localStorage.setItem('products', JSON.stringify(products));
+
+            // Clear input fields
+            document.getElementById('type').value = '';
+            document.getElementById('desc').value = '';
+            document.getElementById('price').value = '';
+            document.getElementById('image').value = '';
+        }
+    </script>
+</body>
+</html>
