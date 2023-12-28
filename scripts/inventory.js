@@ -1,12 +1,9 @@
 function displayProducts() {
-  // Get products from local storage
-  var products = JSON.parse(localStorage.getItem("products")) || [];
+    var products = JSON.parse(localStorage.getItem("products")) || [];      // Getting products from local storage
 
-  // Get container to display products
-  var container = document.getElementById("all_products");
+    var container = document.getElementById("all_products");    // container to display products
 
-  // Clear previous content
-  container.innerHTML = "";
+    container.innerHTML = "";       // Clear previous content
 
   // Loop through products and append to the container
   products.forEach(function (product, index) {
@@ -17,7 +14,7 @@ function displayProducts() {
             <h4>Price: ${product.price}</h4>
             <h4>Image: <br> <img src="${product.image}" alt="Product Image"></h4>
             <button id="remove_product" onclick="removeProduct(${index})">Remove Product</button><hr>`;
-    container.appendChild(productDiv);
+    container.appendChild(productDiv);      //append the product to existing products
   });
 }
 
