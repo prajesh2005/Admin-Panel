@@ -10,36 +10,36 @@
 </head>
 
 <body>
-    <div id="navbar">
-      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
-      <button id="show_products" onclick="window.location.href='inventory.html'">Show Products</button>
-    </div>
+  <div id="navbar">
+    <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+    <button id="show_products" onclick="window.location.href='inventory.html'">Show Products</button>
+  </div>
 
-    <div class="inputs">
-      <h1>Add Products</h1>
-      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+  <div class="inputs">
+    <h1>Add Products</h1>
+    <!--Create a form here to accept product data from user, give form HTML id as "products"-->
 
-      <!--Create four inputs to accept Type, Description, price, & image-->
-      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
-      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+    <!--Create four inputs to accept Type, Description, price, & image-->
+    <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+    <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
 
-      <form id="products">
-        <label for="type">Type:</label>
-        <input type="text" id="type" style="margin-left:75px;">
-        <br>
-        <label for="desc" >Description:</label>
-        <input type="text" id="desc" style="margin-left:20px;">
-        <br>
-        
-        <label for="price">Price:</label>
-        <input type="number" id="price" style="margin-left:72px;">
-        <br>
-        
-        <label for="image">Image URL:</label>
-        <input type="text" id="image"style="margin-left:17px;">
-        <br>
-        
-        <button type="button" id="add_product" onclick="addProduct()">Add Product</button>
+    <form id="products">
+      <label for="type">Type:</label>
+      <input type="text" id="type" style="margin-left:75px;">
+      <br>
+      <label for="desc">Description:</label>
+      <input type="text" id="desc" style="margin-left:20px;">
+      <br>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" style="margin-left:72px;">
+      <br>
+
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" style="margin-left:17px;">
+      <br>
+
+      <button type="button" id="add_product" onclick="addProduct()">Add Product</button>
     </form>
   </div>
 </body>

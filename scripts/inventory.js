@@ -1,7 +1,3 @@
-{
-  /* <link rel="stylesheet" href="/styles.css" /> */
-}
-
 function displayProducts() {
   // Get products from local storage
   var products = JSON.parse(localStorage.getItem("products")) || [];
@@ -27,17 +23,17 @@ function displayProducts() {
 
 // Function to remove product from local storage and update display
 function removeProduct(index) {
-    var products = JSON.parse(localStorage.getItem("products")) || [];
-    
-    // Remove product at the specified index
-    products.splice(index, 1);
-    
-    // Save updated array back to local storage
-    localStorage.setItem("products", JSON.stringify(products));
-    
-    // Update display
-    displayProducts();
-    alert("Product Removed Successfully");
+  var products = JSON.parse(localStorage.getItem("products")) || [];
+
+  // Remove product at the specified index
+  products.splice(index, 1);
+
+  // Save updated array back to local storage
+  localStorage.setItem("products", JSON.stringify(products));
+
+  // Update display
+  displayProducts();
+  alert("Product Removed Successfully");
 }
 
 // Display products when the page loads
